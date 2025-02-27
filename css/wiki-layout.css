@@ -54,6 +54,7 @@ h3.subtitle {
 
 h4 {
   font-size: 1.4rem;
+  margin-top: var(--page-subtitle-margin-y);
   margin-bottom: var(--page-subtitle-margin-y);
 }
 
@@ -74,6 +75,13 @@ div.thumbnail {
   justify-content: center;
   margin-bottom: var(--page-paragraph-margin-y);
 }
+
+div.thumbnail {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--page-paragraph-margin-y);
+}
+
 
 section::after {
   content: "";
@@ -98,13 +106,32 @@ aside h2 {
 }
 
 .profile-image {
-  background-image: url("https://images.unsplash.com/photo-1618979251882-0b40ef3617f0?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("/images/profil.jpg");
   background-size: 100%;
   background-position: center 100%;
   width: var(--aside-width);
   height: var(--aside-width);
 
   text-indent: -1000rem;
+}
+
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  box-sizing: border-box;
+  contain: content;
+}
+
+.gallery-image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }
 
 aside.right-sidebar nav {
@@ -123,6 +150,16 @@ ol.contents li:not(:last-child) {
 ol.contents li a {
   text-decoration: none;
   color: var(--font-default-color);
+}
+fieldset{
+  flex: content;
+}
+input {
+  width: 100%;
+  height: 24px;
+}
+button{
+  width: 100%;
 }
 
 footer {
